@@ -174,3 +174,18 @@ gT or :tabprev or :tabp # move to the previous tab
 :tabonly or :tabo       # close all tabs except for the current one
 :tabdo command          # run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
 ```
+
+
+## Advanced:
+```bash
+:%norm A*               # append a '*' symbol at the end of every line. 
+```
+This is what it means:
+ %       = for every line
+ norm    = type the following commands
+ A*      = append '*' to the end of current line
+ 
+also: 
+```bash
+'<,'>norm A"            # append a "\", " string at the end of the lines selected previously by visual mode.
+```
