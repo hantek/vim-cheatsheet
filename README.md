@@ -179,7 +179,7 @@ gT or :tabprev or :tabp # move to the previous tab
 ## Advanced:
 ```bash
 :%norm A*               # append a '*' symbol at the end of every line. 
-:'<,'>norm A",           # append a '",' string at the end of the lines selected previously by visual mode.
+:'<,'>norm A",          # append a '",' string at the end of the lines selected previously by visual mode.
 ```
 This is what it means:
 ```
