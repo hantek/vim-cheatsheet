@@ -33,6 +33,7 @@ g_       # jump to the last non-blank character of the line
 <b>G        # go to the last line of the document </b>
 5G       # go to line 5
 fx       # jump to next occurrence of character x
+<b>Fx       # jump to previous occurrence of character x </b>
 tx       # jump to before next occurrence of character x
 <b>}        # jump to next paragraph (or function/block, when editing code) </b>
 <b>{        # jump to previous paragraph (or function/block, when editing code) </b>
