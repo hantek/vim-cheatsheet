@@ -3,12 +3,12 @@
 >Disclaimer: This cheatsheet is summerized from my own experience and other publich information. It should not be considered official advice.
 
 ## Global
-```bash
+<pre lang=bash>
 :help keyword # open help for keyword
 :o file       # open file
 :saveas file  # save file as
 :close        # close current pane
-```
+</pre>
 
 ## Cursor movement
 <pre lang=bash>
@@ -29,22 +29,22 @@ B        # jump backwards to the start of a word (words can contain punctuation)
 ^        # jump to the first non-blank character of the line
 $        # jump to the end of the line
 g_       # jump to the last non-blank character of the line
-gg       # go to the first line of the document
-G        # go to the last line of the document
+<b>gg       # go to the first line of the document </b>
+<b>G        # go to the last line of the document </b>
 5G       # go to line 5
 fx       # jump to next occurrence of character x
 tx       # jump to before next occurrence of character x
-}        # jump to next paragraph (or function/block, when editing code)
-{        # jump to previous paragraph (or function/block, when editing code)
+<b>}        # jump to next paragraph (or function/block, when editing code) </b>
+<b>{        # jump to previous paragraph (or function/block, when editing code) </b>
 zz       # center cursor on screen
 Ctrl + b # move back one full screen
 Ctrl + f # move forward one full screen
-Ctrl + d # move forward 1/2 a screen
-Ctrl + u # move back 1/2 a screen
+<b>Ctrl + d # move forward 1/2 a screen </b>
+<b>Ctrl + u # move back 1/2 a screen </b>
 </pre>
 
 ## Insert mode - inserting/appending text
-```bash
+<pre lang=bash>
 i        # insert before the cursor
 I        # insert at the beginning of the line
 a        # insert (append) after the cursor
@@ -53,14 +53,14 @@ o        # append (open) a new line below the current line
 O        # append (open) a new line above the current line
 ea       # insert (append) at the end of the word
 Esc      # exit insert mode
-```
+</pre>
 
 ## Editing
-```bash
+<pre lang=bash>
 r        # replace a single character
 J        # join line below to the current one
-cc       # change (replace) entire line
-cw       # change (replace) to the start of the next word
+<b>cc       # change (replace) entire line </b>
+<b>cw       # change (replace) to the start of the next word </b>
 ce       # change (replace) to the end of the next word
 cb       # change (replace) to the start of the previous word
 c$       # change (replace) to the end of the line
@@ -70,37 +70,37 @@ xp       # transpose two letters (delete and paste)
 .        # repeat last command
 u        # undo
 Ctrl + r # redo
-```
+</pre>
 
 ## Marking text (visual mode)
-```bash
+<pre lang=bash>
 v        # start visual mode, mark lines, then do a command (like y-yank)
 V        # start linewise visual mode
 o        # move to other end of marked area
 O        # move to other corner of block
-aw       # mark a word
-ab       # a block with ()
-aB       # a block with {}
-ib       # inner block with ()
-iB       # inner block with {}
+<b>aw       # mark a word </b>
+<b>ab       # a block with () </b>
+<b>aB       # a block with {} </b>
+<b>ib       # inner block with () </b>
+<b>iB       # inner block with {} </b>
 Esc      # exit visual mode
 Ctrl + v # start visual block mode
-```
+</pre>
 
 ## Visual commands
-```bash
+<pre lang=bash>
 >       # shift text right
 <       # shift text left
 y       # yank (copy) marked text
 d       # delete marked text
-~       # switch case
-```
+<b>~       # switch case </b>
+</pre>
 
 ## Cut and paste
-```bash
+<pre lang=bash>
 yy       # yank (copy) a line
 2yy      # yank (copy) 2 lines
-yw       # yank (copy) the characters of the word from the cursor position to the start of the next word
+<b>yw       # yank (copy) the characters of the word from the cursor position to the start of the next word </b>
 y$       # yank (copy) to end of line
 p        # put (paste) the clipboard after cursor
 P        # put (paste) before cursor
@@ -109,13 +109,13 @@ dd       # delete (cut) a line
 dw       # delete (cut) the characters of the word from the cursor position to the start of the next word
 D        # delete (cut) to the end of the line
 d$       # delete (cut) to the end of the line
-d^       # delete (cut) to the first non-blank character of the line
+<b>d^       # delete (cut) to the first non-blank character of the line </b>
 d0       # delete (cut) to the begining of the line
 x        # delete (cut) character
-```
+</pre>
 
 ## Search and replace
-```bash
+<pre lang=bash>
 /pattern       # search for pattern
 ?pattern       # search backward for pattern
 \vpattern      # 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
@@ -123,28 +123,28 @@ n              # repeat search in same direction
 N              # repeat search in opposite direction
 :%s/old/new/g  # replace all old with new throughout file
 :%s/old/new/gc # replace all old with new throughout file with confirmations
-:noh           # remove highlighting of search matches
-```
+<b>:noh           # remove highlighting of search matches </b>
+</pre>
 
 ## Search in multiple files
-```bash
-:vimgrep /pattern/ {file} # search for pattern in multiple files
+<pre lang=bash>
+<b>:vimgrep /pattern/ {file} # search for pattern in multiple files </b>
 :cn                       # jump to the next match
 :cp                       # jump to the previous match
 :copen                    # open a window containing the list of matches
-```
+</pre>
 
 ## Exiting
-```bash
+<pre lang=bash>
 :w              # write (save) the file, but don't exit
 :w !sudo tee %  # write out the current file using sudo
 :wq or :x or ZZ # write (save) and quit
 :q              # quit (fails if there are unsaved changes)
 :q! or ZQ       # quit and throw away unsaved changes
-```
+</pre>
 
 ## Working with multiple files
-```bash
+<pre lang=bash>
 :e file       # edit a file in a new buffer
 :bnext or :bn # go to the next buffer
 :bprev or :bp # go to the previous buffer
@@ -160,27 +160,27 @@ Ctrl + wh     # move cursor to the left window (vertical split)
 Ctrl + wl     # move cursor to the right window (vertical split)
 Ctrl + wj     # move cursor to the window below (horizontal split)
 Ctrl + wk     # move cursor to the window above (horizontal split)
-```
+</pre>
 
 ## Tabs
-```bash
+<pre lang=bash>
 :tabnew or :tabnew file # open a file in a new tab
-Ctrl + wT               # move the current split window into its own tab
+<b>Ctrl + wT               # move the current split window into its own tab </b>
 gt or :tabnext or :tabn # move to the next tab
 gT or :tabprev or :tabp # move to the previous tab
-<number>gt              # move to tab <number>
+<b><number>gt              # move to tab <number> </b>
 :tabmove <number>       # move current tab to the <number>th position (indexed from 0)
 :tabclose or :tabc      # close the current tab and all its windows
 :tabonly or :tabo       # close all tabs except for the current one
 :tabdo command          # run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
-```
-
+</pre>
 
 ## Advanced:
-```bash
+<pre lang=bash>
 :%norm A*               # append a '*' symbol at the end of every line. 
 :'<,'>norm A",          # append a '",' string at the end of the lines selected previously by visual mode.
-```
+</pre>
+
 This is what it means:
 ```
  %       = for every line
