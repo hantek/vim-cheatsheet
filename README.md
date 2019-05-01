@@ -11,7 +11,7 @@
 ```
 
 ## Cursor movement
-```bash
+<pre lang=bash>
 h        # move cursor left
 j        # move cursor down
 k        # move cursor up
@@ -41,7 +41,7 @@ Ctrl + b # move back one full screen
 Ctrl + f # move forward one full screen
 Ctrl + d # move forward 1/2 a screen
 Ctrl + u # move back 1/2 a screen
-```
+</pre>
 
 ## Insert mode - inserting/appending text
 ```bash
